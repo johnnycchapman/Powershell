@@ -42,60 +42,13 @@
     [System.GC]::WaitForPendingFinalizers()
 
 }
-"Intialized function."
-
-
-# Import Modules
-#Import-Module Az.Storage
-#Import-Module Az.Compute
-#
-## Initialize variables
-#$connectionName = "AzureRunAsConnection"
-#$EnvironmentName = 'AzureCloud'
-#$AArg = "msp-experts" 
-#$automationaccount = "PHRFSAutomation"
-
-
-# Login to Azure using service Principal
-#try
-#{
-#    # Get the connection "AzureRunAsConnection "
-#    $aspervicePrincipalConnection=Get-AutomationConnection -Name $connectionName         
-#    "Logging in to Azure..."
-#    Connect-AzAccount `
-#        -ServicePrincipal `
-#        -Tenant $aspervicePrincipalConnection.TenantId `
-#        -ApplicationId $aspervicePrincipalConnection.ApplicationId `
-#        -CertificateThumbprint $aspervicePrincipalConnection.CertificateThumbprint `
-#        -Environment $EnvironmentName
-#}
-#catch {
-#    if (!$aspervicePrincipalConnection)
-#    {
-#        $ErrorMessage = "Connection $connectionName not found."
-#        throw $ErrorMessage
-#    } else{
-#        Write-Error -Message $_.Exception
-#        throw $_.Exception
-#    }
-#}
-#"Logged in."
-#
-## Get Automation Account Variables 
-#$Container = 'inventory'
-#$Subscription = Get-AzAutomationVariable -AutomationAccountName $automationaccount -Name 'SubscriptionName' -ResourceGroupName $AArg 
-#$StrgRG = Get-AzAutomationVariable -AutomationAccountName $automationaccount -Name 'StrgAcctRG' -ResourceGroupName $AArg 
-#$StrgAcctName = Get-AzAutomationVariable -AutomationAccountName $automationaccount -Name 'InventoryTestStrg' -ResourceGroupName $AArg
-#$StrgAcct = Get-AzStorageAccount -Name $StrgAcctName.Value -ResourceGroupName $StrgRG.Value
-#
-#Select-AzSubscription -Subscription $Subscription.Value
-
 
 try
 {
-    Merge-CSVFiles -CSVPath "C:\Users\Johnny C\Desktop" -XLOutput "C:\Users\Johnny C\Desktop\Inventory-Joint.xlsx"
+    Merge-CSVFiles -CSVPath ".\" -XLOutput ".\Inventory-Joint.xlsx"
+    Write-Host "Merging csv file into Excel!" -ForegroundColor Green
 }
 catch {
     Write-Error -Message $_.Exception
-    "Export failed."
+    Write-Host "Export failed." -ForegroundColor Red
 }
