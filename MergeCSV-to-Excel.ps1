@@ -42,7 +42,15 @@
     [System.GC]::WaitForPendingFinalizers()
 
 }
+<#
+- Navigate to folder that contains the csv file(S)
+- If the script does not output into the csv folder, check the Documents folder
 
+Output should look something like this, depending on the number of CSVs:
+True
+True
+Merging csv file into Excel!
+#>
 try
 {
     Merge-CSVFiles -CSVPath ".\" -XLOutput ".\Inventory-Joint.xlsx"
