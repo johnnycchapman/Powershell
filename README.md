@@ -8,24 +8,21 @@
 6. Push those changes by running: git push origin <branch-name> (usually main/master)
 
 ### GitHub Commands
-https://education.github.com/git-cheat-sheet-education.pdf
+[GitHub Command Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 
 #### Clone GitHub repository
 ```Git
 git clone [repository URL] # get from code button
 ```
-
 #### Stage changes
 ```Git
-git add "<filename>"
+git add "<filename>" # add one file at a time
 git add . # adds all files
 ```
-
 #### Commit changes and add message
 ```Git
 git commit -m "update file"
 ```
-
 #### Push changes back to GitHub
 ```Git
 git push origin main # replace main with branch you are working in
