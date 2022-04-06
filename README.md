@@ -32,4 +32,4 @@ git commit -m "update file"
 git push origin main # replace main with branch you are working in
 ```
 
-**Check GitHub to see if file(s) were added**
+**Check GitHub to see if file(s) were added and updated**
