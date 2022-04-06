@@ -2,17 +2,21 @@
 1. Open Command Prompt and use command cd to navigate to where you want the repository to go
 2. Use *git clone* to clone the repo to your local machine
 3. Make your changes to files (or add new files)
-4. Stage those changes by running: git add "<filename>" to add one file. 
+4. Stage those changes by running: *git add "<filename>"* to add one file. 
 	You can also use: *git add .* to stage all changes
 5. Then to commit changes run: *git commit -m "message for commit"*
 6. Push those changes by running: *git push origin <branch-name>* (usually main/master)
 
 ### GitHub Commands
 [GitHub Command Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
-
+#### Open Command Prompt and change directory 
+> Run all the commands below in Command Prompt
+```Bash
+cd <filepath for folder to house repo> # eg. "c:\Users\User1\Documents"
+```
 #### Clone GitHub repository
 ```Git
-git clone [repository URL] # get from code button
+git clone [repository URL] # copy from green code button
 ```
 #### Stage changes
 ```Git
