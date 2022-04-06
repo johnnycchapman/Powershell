@@ -5,14 +5,14 @@
 4. Stage those changes by running: *git add "<filename>"* to add one file. 
 	You can also use: *git add .* to stage all changes
 5. Then to commit changes run: *git commit -m "message for commit"*
-6. Push those changes by running: *git push origin <branch-name>* (usually main/master)
+6. Push those changes by running: *git push origin main* # git push origin <branch-name> (usually main/master) 
 
 ### GitHub Commands
 [GitHub Command Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 #### Open Command Prompt and change directory 
-> Run all the commands below in Command Prompt
+> To open Command Prompt, type cmd in Start menu
 ```Bash
-cd <filepath for folder to house repo> # eg. "c:\Users\User1\Documents"
+cd # <filepath for folder to house repo> eg. "c:\Users\User1\Documents"
 ```
 #### Clone GitHub repository
 ```Git
